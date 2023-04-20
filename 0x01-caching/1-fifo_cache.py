@@ -7,12 +7,10 @@ from base_caching import BaseCaching
 class FIFOCache(BaseCaching):
     """ A caching system that uses the FIFO algorithm """
 
-
     def __init__(self):
         """ Initialize FIFOCache """
         super().__init__()
         self.keys = []
-
 
     def put(self, key, item):
         """ Add an item in the cache """
@@ -27,7 +25,6 @@ class FIFOCache(BaseCaching):
                 self.keys.pop(0)
         self.cache_data[key] = item
         self.keys.append(key)
-
 
     def get(self, key):
         """ Get an item by key """
