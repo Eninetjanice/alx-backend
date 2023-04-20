@@ -16,7 +16,7 @@ class LIFOCache(BaseCaching):
         """ Add & / del item in the cache """
         if key is None or item is None:
             return
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             if self.keys:
                 last_key = self.keys[-1]
                 del self.cache_data[last_key]
