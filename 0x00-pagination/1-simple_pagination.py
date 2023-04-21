@@ -49,15 +49,15 @@ class Server:
         # Assert both args are int and > 0
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
-        
+
         # Calculate total num of pages
         dataset = self.dataset()
         total_pages = math.ceil(len(dataset) / page_size)
- 
+
         # If input args are out of range for dataset return []:
         if page > total_pages:
             return []
-        
+
         # With index_range find and return appropriate page of dataset
         start_index, end_index = index_range(page, page_size)
         return dataset[start_index:end_index]
