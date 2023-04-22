@@ -45,9 +45,9 @@ class Server:
             index, next_index, page_size, data.
         Behaviour:
             Use assert to verify that index is in a valid range.
-            If user queries index 0, page_size 10, output = indexed 0-9 included.
-            If next index (10) with page_size 10 is requested, but rows 3, 6 & 7
-            were deleted, user should still receive rows indexed 10-19 included.
+            If user queries index 0, page_size 10, output = index 0-9 included.
+            If next index (10) wit page_size 10 is requested, but rows 3, 6 & 7
+            were deleted, user shld still receive rows indexed 10-19 included.
         """
         assert isinstance(index, int) and index >= 0
         assert index < len(self.dataset())
