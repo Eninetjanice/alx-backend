@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Flask application
+Basic Flask application
 """
 from flask import Flask
 from flask import render_template
@@ -19,4 +19,3 @@ def index() -> str:
 
 if __name__ == '__main__':
     app.run()
-    
